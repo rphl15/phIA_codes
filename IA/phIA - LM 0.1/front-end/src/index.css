@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: #f6f6f6;
+  background: #080808;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  height: 100dvh;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid #fed766;
+  outline-offset: 2px;
+}
+
+textarea:focus,
+textarea:focus-visible {
+  outline: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
