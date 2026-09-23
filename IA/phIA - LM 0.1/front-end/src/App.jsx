@@ -167,8 +167,30 @@ export default function App() {
       // Aqui conectaremos futuramente
       // o mecanismo de inteligência próprio.
 
-      const resposta =
-        "Recebi sua mensagem! A interface da phIA está funcionando. Agora precisamos conectar meu mecanismo de inteligência.";
+      const requisicao = await fetch(
+        "http://127.0.0.1:8000/chat",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+            mensagem: texto
+          })
+        }
+      );
+
+      if (!requisicao.ok) {
+        throw new Error(
+          `Erro no backend: ${requisicao.status}`
+        );
+      }
+
+      const dados = await requisicao.json();
+
+      const resposta = dados.resposta;
 
       const mensagemPhia = {
         id: gerarId(),
