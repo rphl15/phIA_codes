@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
+const API_URL = "https://handpick-synopsis-savor.ngrok-free.dev";
 
 function gerarId() {
   return (
@@ -161,26 +162,27 @@ export default function App() {
 
     try {
 
+            // ======================================
+            // INTELIGÊNCIA DA PHIA
+            // ======================================
+            // Aqui conectaremos futuramente
+            // o mecanismo de inteligência próprio.
+
       // ======================================
-      // INTELIGÊNCIA DA PHIA
+      // INTELIGÊNCIA DA RAPHIX
       // ======================================
-      // Aqui conectaremos futuramente
-      // o mecanismo de inteligência próprio.
 
-      const requisicao = await fetch(
-        "http://127.0.0.1:8000/chat",
-        {
-          method: "POST",
+      const requisicao = await fetch(`${API_URL}/chat`, {
+        method: "POST",
 
-          headers: {
-            "Content-Type": "application/json"
-          },
+        headers: {
+          "Content-Type": "application/json"
+        },
 
-          body: JSON.stringify({
-            mensagem: texto
-          })
-        }
-      );
+        body: JSON.stringify({
+          mensagem: texto
+        })
+      });
 
       if (!requisicao.ok) {
         throw new Error(
@@ -499,7 +501,7 @@ export default function App() {
           </div>
 
           <p className="composer-caption">
-            phIA • Desenvolvida por Raphael Camargo
+            phIA • Desenvolvida no Brasil
           </p>
 
         </div>
