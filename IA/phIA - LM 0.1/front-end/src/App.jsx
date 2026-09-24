@@ -168,7 +168,7 @@ export default function App() {
       // o mecanismo de inteligência próprio.
 
       const requisicao = await fetch(
-        "https://position-earthquake-skilled-burning.trycloudflare.com/chat",
+        "https://samuel-lottery-insulation-benz.trycloudflare.com/",
         {
           method: "POST",
 
