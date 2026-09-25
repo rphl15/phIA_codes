@@ -1,115 +1,127 @@
-:root{--yellow:#fed766;--bg:#080808;--panel:#111;--border:#292929}.app{display:flex;height:100%;min-height:0;overflow:hidden;background:var(--bg)}.sidebar{width:270px;flex:0 0 270px;display:flex;flex-direction:column;background:var(--panel);border-right:1px solid var(--border);padding:20px 12px;min-height:0}.sidebar-top{height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 12px}.brand,.header-brand{font-size:23px;font-weight:750;color:var(--yellow);letter-spacing:-.6px}.icon-button{border:0;background:transparent;color:#dedede;display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;border-radius:10px}.icon-button:hover,.conversation-item:hover{background:#292929}.close-sidebar,.menu-button{display:none}.new-chat{display:flex;align-items:center;gap:10px;margin:22px 4px 26px;padding:12px 13px;border:1px solid #424242;border-radius:12px;background:#1d1d1d;color:#fff;text-align:left}.new-chat:hover{border-color:var(--yellow)}.sidebar-label{font-size:11px;letter-spacing:1px;color:#999;margin:0 12px 12px}.conversation-list{overflow-y:auto;flex:1;min-height:0}.conversation-item{display:flex;align-items:center;border-radius:10px;margin:3px 0}.conversation-item.selected{background:#303030}.conversation-select{display:flex;gap:10px;align-items:center;flex:1;min-width:0;text-align:left;border:0;background:transparent;color:#eaeaea;padding:11px 9px}.conversation-select span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.delete-chat{min-width:34px;min-height:34px;color:#aaa}.delete-chat:hover{color:#ff8b8b}.sidebar-footer{border-top:1px solid var(--border);padding:16px 12px 0;color:#777;font-size:12px}.sidebar-backdrop{display:none}.chat-area{display:flex;flex:1;min-width:0;min-height:0;flex-direction:column}.chat-header{height:64px;flex:0 0 64px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;border-bottom:1px solid #202020}.chat-scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}.welcome{min-height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:25px;text-align:center}.welcome-logo{font-size:clamp(45px,8vw,66px);font-weight:750;color:var(--yellow);letter-spacing:-3px}.welcome h1{font-size:clamp(20px,3vw,29px);font-weight:500;margin:14px 0 8px}.welcome p{font-size:14px;color:#999}.messages{max-width:880px;margin:auto;padding:30px 24px 36px;display:flex;flex-direction:column;gap:24px}.message-row{display:flex;align-items:flex-start;gap:12px}.message-row.from-user{justify-content:flex-end}.avatar{width:32px;height:32px;flex:0 0 32px;border-radius:50%;display:flex;align-items:center;justify-content:center}.phia-avatar{background:var(--yellow);color:#111}.user-avatar{background:#343434;color:#eee}.message-bubble{max-width:min(78%,650px);padding:12px 16px;border-radius:16px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55;font-size:15px}.from-user .message-bubble{background:#262626;border-top-right-radius:5px}.from-phia .message-bubble{background:#171717;border-top-left-radius:5px}.composer-area{width:100%;max-width:900px;margin:0 auto;padding:12px 24px max(14px,env(safe-area-inset-bottom))}.composer{display:flex;align-items:flex-end;gap:12px;background:#1b1b1b;border:1px solid #353535;border-radius:19px;padding:10px 11px 10px 17px}.composer:focus-within{border-color:#353535}.composer textarea{width:100%;min-height:28px;max-height:140px;resize:none;overflow-y:auto;background:transparent;border:0;outline:0;color:#fff;line-height:1.5;padding:6px 0}.composer textarea::placeholder{color:#999}.send-button{width:39px;height:39px;flex:0 0 39px;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:var(--yellow);color:#111}.send-button:disabled{opacity:.45;cursor:not-allowed}.composer-caption{text-align:center;font-size:11px;color:#777;margin:10px 0 0}@media(max-width:768px){.sidebar{position:fixed;inset:0 auto 0 0;z-index:20;width:min(290px,85vw);transform:translateX(-100%);transition:transform .2s ease;padding-top:max(16px,env(safe-area-inset-top))}.sidebar.open{transform:translateX(0)}.sidebar-backdrop.visible{display:block;position:fixed;inset:0;background:#0009;z-index:19}.close-sidebar,.menu-button{display:inline-flex}.chat-header{height:58px;flex-basis:58px;padding:0 12px}.messages{padding:22px 12px;gap:20px}.message-row{gap:8px}.message-bubble{max-width:calc(100% - 48px);padding:10px 12px;font-size:14px}.composer-area{padding:9px 10px max(9px,env(safe-area-inset-bottom))}.composer{border-radius:17px}.composer textarea{font-size:16px}.composer-caption{font-size:10px;margin:7px 0 0}.welcome{padding:16px}.welcome p{max-width:260px;line-height:1.5}}@media(prefers-reduced-motion:reduce){.sidebar{transition:none}*{scroll-behavior:auto!important}}
-/* =========================================================
-   SIDEBAR RETRÁTIL - RAPHIX
-   Adicione este bloco NO FINAL do seu App.css.
-   Ele força o histórico a ficar escondido até clicar no botão ☰.
-   ========================================================= */
+  background: #171717;
+  border-top-left-radius: 5px;
+}
 
-.sidebar {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: min(300px, 86vw);
-  height: 100dvh;
-  z-index: 1000;
+.composer-area {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 24px max(14px, env(safe-area-inset-bottom));
+}
 
-  transform: translateX(-105%) !important;
-  transition: transform 0.25s ease;
-
-  overflow: hidden;
+.composer {
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  background: #1b1b1b;
+  border: 1px solid #353535;
+  border-radius: 19px;
+  padding: 10px 11px 10px 17px;
 }
 
-.sidebar.open {
-  transform: translateX(0) !important;
+.composer textarea {
+  width: 100%;
+  min-height: 28px;
+  max-height: 140px;
+  resize: none;
+  overflow-y: auto;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  line-height: 1.5;
+  padding: 6px 0;
 }
 
-.sidebar-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-
-  background: rgba(0, 0, 0, 0.58);
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition:
-    opacity 0.25s ease,
-    visibility 0.25s ease;
+.composer textarea::placeholder {
+  color: #999999;
 }
 
-.sidebar-backdrop.visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.chat-area {
-  width: 100% !important;
-  margin-left: 0 !important;
-}
-
-.menu-button {
-  display: inline-flex !important;
+.send-button {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  background: var(--yellow);
+  color: #111111;
 }
 
-.conversation-list {
-  overflow-y: auto;
-  min-height: 0;
-  flex: 1;
+.send-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
-.conversation-select {
-  min-width: 0;
+.composer-caption {
+  text-align: center;
+  font-size: 11px;
+  color: #777777;
+  margin: 10px 0 0;
 }
 
-.conversation-title {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.empty-history {
-  margin: 12px 14px;
-  opacity: 0.55;
-  font-size: 0.9rem;
-}
-
-/* Evita que regras antigas deixem a lateral fixa em telas grandes. */
-@media (min-width: 769px) {
-  .sidebar {
-    position: fixed !important;
-    transform: translateX(-105%) !important;
-  }
-
-  .sidebar.open {
-    transform: translateX(0) !important;
-  }
-
-  .chat-area {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-
-  .sidebar-backdrop.visible {
-    display: block !important;
-  }
-
-  .menu-button {
-    display: inline-flex !important;
-  }
-}
-
-/* Ajuste para celular. */
 @media (max-width: 768px) {
   .sidebar {
     width: min(290px, 88vw);
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
+
+  .chat-header {
+    height: 58px;
+    flex-basis: 58px;
+    padding: 0 12px;
+  }
+
+  .messages {
+    padding: 22px 12px;
+    gap: 20px;
+  }
+
+  .message-row {
+    gap: 8px;
+  }
+
+  .message-bubble {
+    max-width: calc(100% - 48px);
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .composer-area {
+    padding: 9px 10px max(9px, env(safe-area-inset-bottom));
+  }
+
+  .composer {
+    border-radius: 17px;
+  }
+
+  .composer textarea {
+    font-size: 16px;
+  }
+
+  .composer-caption {
+    font-size: 10px;
+    margin: 7px 0 0;
+  }
+
+  .welcome {
+    padding: 16px;
+  }
+
+  .welcome p {
+    max-width: 260px;
+    line-height: 1.5;
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .sidebar {
+    transition: none;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}
