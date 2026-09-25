@@ -225,7 +225,7 @@ export default function App() {
                   ...item.mensagens,
                   {
                     id: gerarId(),
-                    tipo: "phia",
+                    tipo: "Raphix",
                     texto:
                       "Ocorreu um erro ao processar sua mensagem."
                   }
@@ -269,7 +269,7 @@ export default function App() {
 
         <div className="sidebar-top">
 
-          <span className="brand">phIA</span>
+          <span className="brand">Raphix</span>
 
           <button
             className="icon-button close-sidebar"
@@ -334,7 +334,7 @@ export default function App() {
         </div>
 
         <div className="sidebar-footer">
-          phIA • Inteligência Artificial
+          Raphix • Inteligência Artificial
         </div>
 
       </aside>
@@ -380,7 +380,7 @@ export default function App() {
             <div className="welcome">
 
               <div className="welcome-logo">
-                phIA
+                Raphix
               </div>
 
               <h1>
@@ -499,7 +499,7 @@ export default function App() {
           </div>
 
           <p className="composer-caption">
-            phIA • Desenvolvida por Raphael Camargo
+            Raphix • Desenvolvida no Brasil
           </p>
 
         </div>
