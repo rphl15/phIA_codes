@@ -358,7 +358,7 @@ export default function App() {
           </button>
 
           <span className="header-brand">
-            phIA
+            Raphix
           </span>
 
           <button
