@@ -168,7 +168,7 @@ export default function App() {
       // o mecanismo de inteligência próprio.
 
       const requisicao = await fetch(
-        "https://immediately-overview-interior-treatments.trycloudflare.com",
+        "https://sense-lender-hampshire-voters.trycloudflare.com",
         {
           method: "POST",
 
