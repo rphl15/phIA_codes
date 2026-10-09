@@ -168,7 +168,7 @@ export default function App() {
       // o mecanismo de inteligência próprio.
 
       const requisicao = await fetch(
-        "https://samuel-lottery-insulation-benz.trycloudflare.com/chat",
+        "https://immediately-overview-interior-treatments.trycloudflare.com",
         {
           method: "POST",
 
@@ -269,7 +269,7 @@ export default function App() {
 
         <div className="sidebar-top">
 
-          <span className="brand">Raphix</span>
+          <span className="brand">phIA</span>
 
           <button
             className="icon-button close-sidebar"
@@ -334,7 +334,7 @@ export default function App() {
         </div>
 
         <div className="sidebar-footer">
-          Raphix • Inteligência Artificial
+          phIA • Inteligência Artificial
         </div>
 
       </aside>
@@ -350,15 +350,15 @@ export default function App() {
           <button
             className="icon-button menu-button"
             onClick={() =>
-              setMenuAberto((aberto) => !aberto)
+              setMenuAberto(true)
             }
-            aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+            aria-label="Abrir menu"
           >
             ☰
           </button>
 
           <span className="header-brand">
-            Raphix
+            phIA
           </span>
 
           <button
@@ -380,7 +380,7 @@ export default function App() {
             <div className="welcome">
 
               <div className="welcome-logo">
-                Raphix
+                phIA
               </div>
 
               <h1>
@@ -499,7 +499,7 @@ export default function App() {
           </div>
 
           <p className="composer-caption">
-            Raphix • Desenvolvida no Brasil
+            phIA • Desenvolvida por Raphael Camargo
           </p>
 
         </div>
