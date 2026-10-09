@@ -168,7 +168,7 @@ export default function App() {
       // o mecanismo de inteligência próprio.
 
       const requisicao = await fetch(
-        "https://sense-lender-hampshire-voters.trycloudflare.com",
+        "https://sense-lender-hampshire-voters.trycloudflare.com/chat",
         {
           method: "POST",
 
